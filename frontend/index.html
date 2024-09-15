@@ -9,11 +9,13 @@
   <h1 class="text-3xl font-bold underline mb-8">PenPals</h1>
 
   <div class="flex gap-2 flex-wrap mb-4">
-    <textarea class="block max-w-prose w-full min-w-5 flex-shrink-0 border border-gray-300 rounded-md p-2 min-h-96" id="original-message" placeholder="Original Message"></textarea>
+    <textarea name="original-message" form="form" class="block max-w-prose w-full min-w-5 flex-shrink-0 border border-gray-300 rounded-md p-2 min-h-96" id="original-message" placeholder="Original Message"></textarea>
 
     <textarea class="block max-w-prose w-full min-w-5 flex-shrink-0 border border-gray-300 rounded-md p-2 min-h-96" id="formatted-message" placeholder="Formatted Message"></textarea>
   </div>
 
-  <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl" id="format">Format</button>
+  <form id="form" class="hidden"></form>
+
+  <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl" form="form">Format</button>
 </body>
 </html>

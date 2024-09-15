@@ -3,24 +3,26 @@
 <head>
   <meta charset="utf-8"/>
   <title>Hello World</title>
-  <link rel="stylesheet" href="/styles-3aede0bbcac9f2bc.css" integrity="sha384&#x2D;T7EcZc&#x2B;hfkwuA5nn&#x2B;wyKn2mYpAylni7eLTO68wyjXBPSCFllk9MUkHzJzrL4y6zb"/>
+  <link rel="stylesheet" href="/styles-a21f2e37ab74cf40.css" integrity="sha384&#x2D;VvYT0hz94&#x2F;XC9goZbq8ccfz&#x2B;x9d6&#x2B;tfiqfiorH3A6IM07cg9MKSAnjx&#x2F;y5&#x2B;5QXom"/>
 
-<link rel="modulepreload" href="/frontend-356c1343c6b2b2b3.js" crossorigin=anonymous integrity="sha384-xP+gRE+b4+FTdJLV5FePJPABpDnkyr3Ss/MjPrQiJnVE9CUortMvTcxsdvg8VJtO">
-<link rel="preload" href="/frontend-356c1343c6b2b2b3_bg.wasm" crossorigin=anonymous integrity="sha384-s+Br98iYI+Sqh06bbFn1sgiKfKD08SLa3Xxv4eJnzKzeBAhgajOAWrvPH9EydlF9" as="fetch" type="application/wasm"></head>
+<link rel="modulepreload" href="/frontend-9ec81986ed15c39a.js" crossorigin=anonymous integrity="sha384-X83zRptXiz3wVOwNIj0x66NIjfHN4Cnyn8tr/XAzcBjmdI4FlBTkG6ITqgcJ22J5">
+<link rel="preload" href="/frontend-9ec81986ed15c39a_bg.wasm" crossorigin=anonymous integrity="sha384-9F/jqLTxvDVkFgLMsBvX7nOe8721U2S7aArt24I1jbfjbOxoLNlu00HOrUEGbt9w" as="fetch" type="application/wasm"></head>
 <body class="max-w-screen-2xl mx-auto">
   <h1 class="text-3xl font-bold underline mb-8">PenPals</h1>
 
   <div class="flex gap-2 flex-wrap mb-4">
-    <textarea class="block max-w-prose w-full min-w-5 flex-shrink-0 border border-gray-300 rounded-md p-2 min-h-96" id="original-message" placeholder="Original Message"></textarea>
+    <textarea name="original-message" form="form" class="block max-w-prose w-full min-w-5 flex-shrink-0 border border-gray-300 rounded-md p-2 min-h-96" id="original-message" placeholder="Original Message"></textarea>
 
     <textarea class="block max-w-prose w-full min-w-5 flex-shrink-0 border border-gray-300 rounded-md p-2 min-h-96" id="formatted-message" placeholder="Formatted Message"></textarea>
   </div>
 
-  <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl" id="format">Format</button>
+  <form id="form" class="hidden"></form>
 
-<script type="module" nonce="re/NN+nuIJq7DzTStD8kUQ==">
-import init, * as bindings from '/frontend-356c1343c6b2b2b3.js';
-const wasm = await init('/frontend-356c1343c6b2b2b3_bg.wasm');
+  <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl" form="form">Format</button>
+
+<script type="module" nonce="Kv3QCC+GVDCGi2d98+PnHg==">
+import init, * as bindings from '/frontend-9ec81986ed15c39a.js';
+const wasm = await init('/frontend-9ec81986ed15c39a_bg.wasm');
 
 
 window.wasmBindings = bindings;

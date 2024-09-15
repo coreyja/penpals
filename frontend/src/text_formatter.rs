@@ -59,18 +59,20 @@ impl Paragraphs {
                 .collect(),
         )
     }
-}
 
-fn split_into_paragraphs(text: &str) -> Paragraphs {
-    Paragraphs(
-        text.split("\n\n")
-            .map(|s| Paragraph(s.trim().to_string()))
-            .collect(),
-    )
+    fn new(text: &str) -> Paragraphs {
+        Paragraphs(
+            text.split("\n\n")
+                .map(|s| Paragraph(s.trim().to_string()))
+                .collect(),
+        )
+    }
 }
 
 pub fn format(text: &str) -> String {
-    let paragraphs = split_into_paragraphs(text);
-
-    paragraphs.strip_quotes().remove_empty().quote().to_string()
+    Paragraphs::new(text)
+        .strip_quotes()
+        .remove_empty()
+        .quote()
+        .to_string()
 }

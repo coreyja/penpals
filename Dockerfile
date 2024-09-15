@@ -14,4 +14,4 @@ RUN cd server && cargo build --release
 
 EXPOSE 3000
 
-CMD ["server/target/release/server"]
+CMD ["target/release/server"]

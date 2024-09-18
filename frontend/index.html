@@ -2,20 +2,62 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
-  <title>Hello World</title>
+  <title>PenPals - coreyja.com</title>
   <link data-trunk rel="tailwind-css" href="styles.css">
 </head>
-<body class="max-w-screen-2xl mx-auto">
-  <h1 class="text-3xl font-bold underline mb-8">PenPals</h1>
+<body class="max-w-screen-2xl mx-auto px-4 pb-8">
+  <h1 class="text-3xl font-bold mb-8">PenPals</h1>
 
-  <div class="flex gap-2 flex-wrap mb-4">
-    <textarea name="original-message" form="form" class="block max-w-prose w-full min-w-5 flex-shrink-0 border border-gray-300 rounded-md p-2 min-h-96" id="original-message" placeholder="Original Message"></textarea>
+  <div class="max-w-prose">
+    <p class="mb-4">
+      Hey Team! PenPals is a tool written by <a class="underline" href="https://coreyja.com">coreyja</a>
+    </p>
 
-    <textarea class="block max-w-prose w-full min-w-5 flex-shrink-0 border border-gray-300 rounded-md p-2 min-h-96" id="formatted-message" placeholder="Formatted Message"></textarea>
+    <p class="mb-4">
+      It's a tool that I built to solve very specific problem I have.
+    </p>
+
+    <p class="mb-4">
+      I have a few friends who I exchange longer "pen-pal" style messages with. We each take a few days or weeks to respond at a time. And usually we quote the paragraph or sentence we are responding to, to help provide context to different sections of the messsages.
+    </p>
+
+    <p class="mb-4">
+      This tool allows you to reformat a message into quote blocks where you can add your own comments below each quote!
+      Take the message that your PenPal sent, and put it in the box on the left. Then hit "Format" and the tool will strip out any existing quotes (we don't need to nest each quote like email does), and takes your penpals paragraphs and quotes each one.
+      Take the output into your favorite editor, and add your own comments before sending it off!
+    </p>
+
+    <p class="mb-4">
+      Interested in how this was built? It was written end-to-end on Stream! <br />
+      Check out the <a class="underline" ref="nofollow noopener" target="_blank" href="https://youtu.be/W1kAlZa2yvA">video here</a>.
+    </p>
   </div>
 
-  <form id="form" class="hidden"></form>
+  <main class="my-8">
+    <div class="flex gap-2 flex-wrap mb-4">
+      <textarea name="original-message" form="form" class="block max-w-prose w-full min-w-5 flex-shrink-0 border border-gray-300 rounded-md p-2 min-h-96" id="original-message" placeholder="Original Message"></textarea>
 
-  <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl" form="form">Format</button>
+      <textarea class="block max-w-prose w-full min-w-5 flex-shrink-0 border border-gray-300 rounded-md p-2 min-h-96" id="formatted-message" placeholder="Formatted Message"></textarea>
+    </div>
+
+    <form id="form" class="hidden"></form>
+
+    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl" form="form">Format</button>
+  </main>
+
+  <p class="mt-4">
+    Check out more projects by
+    <a class="underline" href="https://coreyja.com">coreyja</a>
+    on my site!
+    <a class="underline" href="https://coreyja.com">coreyja.com</a>
+  </p>
+
+  <p class="mt-4">
+    Github Repo: <a class="underline" href="https://github.com/coreyja/penpals">github.com/coreyja/penpals</a>
+  </p>
+
+  <p class="mt-4">
+    &copy; Copyright Corey Alexander 2024
+  </p>
 </body>
 </html>

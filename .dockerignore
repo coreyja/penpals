@@ -1,5 +1,12 @@
+.github/
+script/
+fly.toml
+README.md
+TODOS.md
+LICENSE
+
 **/target
-**/frontend/dist
-**/frontend/.trunk
+frontend/dist
+frontend/.trunk
 
 Dockerfile
